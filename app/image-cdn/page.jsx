@@ -8,7 +8,7 @@ export const metadata = {
     title: 'Image CDN'
 };
 
-const sampleImage = '/images/corgi.jpg';
+const sampleImage = '/images/Tomtom.png';
 
 const ctx = getNetlifyContext();
 const forceWebP = ctx === 'dev';
@@ -25,7 +25,7 @@ When running on Netlify, \`next/image\` is automatically set-up to use Netlify I
 import Image from 'next/image';
 
 // In your component
-<Image src="/images/corgi.jpg" alt="Corgi" /* ... additional props */ />
+<Image src="/images/Tomtom.png" alt="Corgi" /* ... additional props */ />
 ~~~
 `;
 
@@ -35,11 +35,11 @@ Other than using \`next/image\` or rolling your own \`<img>\` tags, you can also
 
 ~~~jsx
 // <== On the left, the original image
-<img src="/images/corgi.jpg" alt="Corgi" />
+<img src="/images/Tomtom.png" alt="Corgi" />
 
 // ==> On the right, explicitly using Netlify Image CDN endpoint for a responsive image
 <img 
-  srcSet="/.netlify/images?url=images/corgi.jpg&w=640 640w, /.netlify/images?url=images/corgi.jpg&w=1280 1280w, /.netlify/images?url=images/corgi.jpg&w=2048 2048w"
+  srcSet="/.netlify/images?url=images/Tomtom.png&w=640 640w, /.netlify/images?url=images/Tomtom.png&w=1280 1280w, /.netlify/images?url=images/Tomtom.png&w=2048 2048w"
   sizes="(max-width: 1024px) 100vw, 1024px" 
   alt="Corgi" 
 />
@@ -69,7 +69,7 @@ export default function Page() {
                 <figure>
                     <div className="relative overflow-hidden border-2 border-white rounded-lg aspect-3/2">
                         <Image
-                            src="/images/corgi.jpg"
+                            src="/images/Tomtom.png"
                             priority
                             fill={true}
                             style={{ objectFit: 'contain' }}
@@ -98,7 +98,7 @@ export default function Page() {
                 >
                     <div className="relative col-start-1 row-start-1 overflow-hidden border-r-2 z-1 border-r-white diff-item-1">
                         <div>
-                            <ImageWithSizeOverlay src="/images/corgi.jpg" />
+                            <ImageWithSizeOverlay src="/images/Tomtom.png" />
                         </div>
                     </div>
                     <div className="relative col-start-1 row-start-1 diff-item-2" tabIndex="0">
